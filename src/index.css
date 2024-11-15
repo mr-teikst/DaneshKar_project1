@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Apply text-end to all elements */
+  * {
+    
+
+    border: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  :root {
+    padding: 0px;
+    margin: 0px;
+  }
+  body {
+    padding: 0px;
+    margin: 0px;
+    background-color: white !important;
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -73,7 +94,6 @@ button:focus-visible {
 
 @layer base {
   :root {
-
     --background: 0 0% 100%;
 
     --foreground: 0 0% 3.9%;
@@ -122,10 +142,9 @@ button:focus-visible {
 
     --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
-
     --background: 0 0% 3.9%;
 
     --foreground: 0 0% 98%;
@@ -172,7 +191,7 @@ button:focus-visible {
 
     --chart-4: 280 65% 60%;
 
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 

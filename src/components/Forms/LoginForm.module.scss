@@ -1,0 +1,15 @@
+.input_style {
+  @apply bg-gray-200 border border-4 outline-4 border-gray-300 rounded-md py-1 px-2 text-left  !important;
+}
+
+.form_style {
+  @apply w-[60vw] h-[60vh] flex flex-col justify-center items-center gap-8;
+}
+
+.input_box {
+  @apply flex flex-col justify-center items-center gap-2 w-2/5;
+}
+
+.label_style {
+  @apply ml-4 self-start;
+}

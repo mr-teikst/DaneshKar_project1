@@ -1,0 +1,13 @@
+.item_box {
+  @apply flex items-center bg-slate-300 w-full;
+}
+.item_detail_box {
+  @apply flex flex-col items-start justify-center w-3/5 m-4 gap-3 font-bold ml-16;
+}
+.item_btn_box {
+  @apply flex flex-col justify-center items-center gap-5 w-2/5 m-4;
+}
+
+.btn {
+  @apply w-1/2 h-8 !important;
+}

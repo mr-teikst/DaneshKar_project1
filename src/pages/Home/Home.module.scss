@@ -1,0 +1,10 @@
+.full_screen {
+    @apply mx-auto h-screen flex flex-col justify-center items-center top-0 left-0 bg-slate-500 !important;
+  }
+  
+  .card_style {
+    @apply overflow-y-auto w-[90vw] h-[90vh] flex flex-col justify-start items-center gap-4 mt-14;
+  }
+  
+  
+  
