@@ -105,8 +105,9 @@ function EditForm({ className, id }) {
     const bodyData = {
       title: data.title !== "" ? data.title : book_?.title,
       isbn: data.isbn !== "" ? data.isbn : book_?.isbn,
-      author: data.author ?? book_?.author,
-      publishedYear: data.publishedYear ?? book_?.publishedYear,
+      author: data.author !== "" ? data.author : book_?.author,
+      publishedYear:
+        data.publishedYear !== "" ? data.publishedYear : book_?.publishedYear,
     };
     console.log("boddydata: ", bodyData);
     await putData(`/api/books/${id}`, bodyData)
