@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Label } from "../../components/ui/label.jsx";
 import { Button } from "../../components/ui/button.jsx";
 import { Input } from "../../components/ui/input.jsx";
@@ -9,7 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
@@ -29,6 +29,14 @@ const LoginForm = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+
+  useEffect(() => {
+    console.log(errors);
+    Object.keys(errors).forEach((key) => {
+      let tempStr = `${errors[key].message}`;
+      toast.error(tempStr);
+    });
+  }, [errors]);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -73,6 +81,7 @@ const LoginForm = () => {
           />
         </div>
         <Button type="submit">Signup</Button>
+        <Link to="/login">Login</Link>
       </form>
     </>
   );
